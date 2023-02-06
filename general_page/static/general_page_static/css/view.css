@@ -18,9 +18,14 @@
     padding: 10rem;
     width: 35rem;
     height: 35rem;
+    background: #fff;
     border: var(--border-width) solid var(--main-color);
     border-radius: 50%;
     transition: .5s;
+}
+.back-btn svg{
+    width: 35rem;
+    height: 35rem;
 }
 .back-btn line{
     stroke: var(--main-color);
@@ -33,13 +38,13 @@
 .back-btn:hover line{
     stroke: white;
 }
-.test{
+.meal-photo{
     width: 100%;
     height: 600rem;
     position: relative;
     clip-path: inset(0);
 }
-.meal-photo{
+.meal-photo img{
     position: fixed;
     height: 600rem;
     object-fit: cover;
@@ -94,6 +99,7 @@
 .meal-ingredients-list li{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 25rem;
     margin-bottom: 20rem;
 }
@@ -104,4 +110,30 @@
 .meal-ingredients-title img{
     margin-right: 10px;
     width: 50px;
+}
+
+@media screen and ( max-width: 1024px) {
+    html{
+        font-size: .8px;
+    }
+    .meal-photo,
+    .meal-photo img{
+        height: 450rem;
+    }
+}
+
+@media screen and ( max-width: 800px) {
+    .meal-text{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .meal-main-info{
+        margin-bottom: 20rem;
+    }
+}
+
+@media screen and ( max-width: 800px) {
+    html{
+        font-size: .7px;
+    }
 }
