@@ -86,7 +86,6 @@
     flex-direction: column;
     position: relative;
     font-size: 18rem;
-    width: 200px;
     height: 200px;
     border-radius: 5px;
     transition: .5s;
@@ -122,4 +121,15 @@
 }
 .sixth-card{
     background: var(--sixth-category-color);
+}
+
+@media screen and ( max-width: 600px) {
+   .home-page .wrapper{
+    width: 80%;
+   }
+}
+@media screen and ( max-width: 375px) {
+    .wellcome-img{
+        display: none;
+    }
 }
