@@ -44,11 +44,13 @@ header{
 header nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 header a{
+    display: inline-block;
+    padding: 5px;
     color: var(--main-font-color);
     text-decoration: none;
-    padding-bottom: 5px;
     border-bottom: 2px solid transparent;
     transition: 0.5s;
 }
