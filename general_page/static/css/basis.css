@@ -1,0 +1,63 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+
+:root{
+    /* color */
+    --main-color: #12947C;
+    --main-font-color: #111B40;
+    --secondary-font-color: #AAAEC0;
+
+    --all-recipes-color: #EDF8F1;
+    --first-category-color: #FDE598;
+    --second-category-color: #BEE8FF;
+    --thrid-category-color: #FCA896;
+    --fourth-category-color: #F2AFDF;
+    --fifth-category-color: #7ED9BF;
+    --sixth-category-color: #FFD698;
+
+
+    --search-input-bg: #F6F7FC;
+
+    /* whidth */
+    --wraper-width: 90%;
+    --border-width: 2px;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main-font-color);
+    font-size: 1px;
+}
+.wrapper{
+    margin: 0 auto;
+    width: var(--wraper-width);
+}
+header{
+    margin-bottom: 25rem;
+    padding: 20rem 0;
+    font-size: 20rem;
+    background: #fff;
+    border-bottom: 2px solid var(--main-color);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header a{
+    color: var(--main-font-color);
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s;
+}
+header a:hover{
+    border-bottom: 2px solid var(--main-color);
+}
+.logo a{
+    font-size: 25rem;
+}
+main{
+    margin-bottom: 50rem;
+}

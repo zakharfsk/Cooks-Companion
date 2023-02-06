@@ -1,0 +1,125 @@
+@import url(basis.css);
+
+.home-page .wrapper{
+    width: 60%;
+}
+.wellcome-section{
+    margin-bottom: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wellcome-section h1{
+    margin-bottom: 10rem;
+    font-size: 35rem;
+    color: var(--main-color);
+}
+.wellcome-section p {
+    font-size: 18rem;
+    color: var(--secondary-font-color);
+}
+.wellcome-img img{
+    width: 100rem;
+}
+.search-section{
+    margin-bottom: 50rem;
+}
+.search-section form{
+    margin-bottom: 25rem;
+}
+.serach-box{
+    position: relative;
+}
+.search-input{
+    display: block;
+    padding: 10rem 10rem 10rem 40rem;
+    width: 100%;
+    font-size: 18px;
+    color: var(--secondary-font-color);
+    background: var(--search-input-bg);
+    border: var(--border-width) solid var(--search-input-bg);
+    border-radius: 5px;
+}
+.search-ico{
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    width: 25rem;
+    height: 25rem;
+    transform: translateY(-50%);
+}
+.recipes-or{
+    margin-bottom: 25rem;
+    font-size: 30rem;
+    text-align: center;
+}
+.all-recipes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30rem 0;
+    width: 100%;
+    color: var(--main-font-color);
+    text-decoration: none;
+    font-size: 20rem;
+    background: var(--all-recipes-color);
+    border-radius: 5px;
+    transition: .5s;
+}
+.all-recipes a:hover{
+    transform: scale(1.1);
+}
+.categories-title{
+    font-size: 25rem;
+    margin-bottom: 25rem;
+}
+.categories{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+}
+.category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-size: 18rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    transition: .5s;
+}
+.category a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.category img{
+    width: 50rem;
+}
+.category:hover{
+    transform: scale(1.1);
+}
+.first-card{
+    background: var(--first-category-color);
+}
+.second-card{
+    background: var(--second-category-color);
+}
+.thrid-card{
+    background: var(--thrid-category-color);
+}
+.fourth-card{
+    background: var(--fourth-category-color);
+}
+.fifth-card{
+    background: var(--fifth-category-color);
+}
+.sixth-card{
+    background: var(--sixth-category-color);
+}
