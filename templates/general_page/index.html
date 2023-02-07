@@ -13,14 +13,13 @@
 <header>
     <div class="wrapper">
         <nav>
-            <div class="logo"><a href="{% url 'index_page' %}">Recipt</a></div>
+            <div class="logo"><a href="{% url 'index_page' %}">Cooks Companion</a></div>
             <div class="header-user">
-                <a href="{% url 'user_profile' %}">User</a>
+                <a href="{% url 'user_profile' %}">{{ user.username }}Test</a>
             </div>
         </nav>
     </div>
 </header>
-
 <main class="home-page">
     <div class="wrapper">
         <section class="wellcome-section">
@@ -51,36 +50,13 @@
         <section class="meal-categories">
             <h3 class="categories-title">Categories</h3>
             <div class="categories">
-                <div class="category first-card">
-                    <img src="{% static 'general_page_static/img/salat.png' %}" alt="meal">
-                    <p>Quickly</p>
-                    <a href="#"></a>
-                </div>
-                <div class="category second-card">
-                    <img src="{% static 'general_page_static/img/dinner.png' %}" alt="meal">
-                    <p>Dinner</p>
-                    <a href="#"></a>
-                </div>
-                <div class="category thrid-card">
-                    <img src="{% static 'general_page_static/img/cake.png' %}" alt="meal">
-                    <p>Celebratory</p>
-                    <a href="#"></a>
-                </div>
-                <div class="category fourth-card">
-                    <img src="{% static 'general_page_static/img/breakfast.png' %}" alt="meal">
-                    <p>Brakfast</p>
-                    <a href="#"></a>
-                </div>
-                <div class="category fifth-card">
-                    <img src="{% static 'general_page_static/img/salat.png' %}" alt="meal">
-                    <p>Vegetarian</p>
-                    <a href="#"></a>
-                </div>
-                <div class="category sixth-card">
-                    <img src="{% static 'general_page_static/img/salat.png' %}" alt="meal">
-                    <p>Low Calorie</p>
-                    <a href="#"></a>
-                </div>
+                {% for category in categories %}
+                    <div class="category">
+                        <img src="{{ category.category_thumb }}" alt="meal">
+                        <p>{{ category.name_category }}</p>
+                        <a href="{% url 'category_page' %}?c={{ category.name_category }}"></a>
+                    </div>
+                {% endfor %}
             </div>
         </section>
     </div>
