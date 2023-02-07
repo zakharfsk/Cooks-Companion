@@ -32,6 +32,7 @@
 
         <section class="search-section">
             <form action="#" method="POST">
+                {% csrf_token %}
                 <label class="serach-box">
                     <input type="search" name="" class="search-input" placeholder="Search Recipes">
                     <svg class="search-ico" fill="#12947C" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -44,7 +45,7 @@
 
             <div class="all-recipes">
                 <a href="{% url 'search_page' %}">All Recipes</a>
-                <a href="{% url 'search_page' %}">AI Recipe</a>
+                <a href="{% url 'random_recipe_from_ai' %}">Random AI Recipe</a>
             </div>
         </section>
 
@@ -57,10 +58,11 @@
                         <p>{{ category.name_category }}</p>
                         <a href="{% url 'category_page' %}?c={{ category.name_category }}"></a>
                     </div>
-                {% endfor %}
+                {% endfor %{% static 'general_page_static/js/filter.js' %}}
             </div>
         </section>
     </div>
 </main>
+<script src="{% static 'general_page_static/js/index_page.js' %}"></script>
 </body>
 </html>

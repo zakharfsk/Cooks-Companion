@@ -6,6 +6,7 @@ from django.shortcuts import render
 
 from .services.meal_api.meal_services import get_meal_categories, get_all_meals_by_category, get_all_meal, \
     get_meal_by_id
+from .services.сhatsonic_api.сhatsonic_service import get_random_recipe
 
 
 def index_page(request: WSGIRequest) -> HttpResponse:
@@ -52,5 +53,16 @@ def view_page(request: WSGIRequest) -> HttpResponse:
         {
             'user': request.user,
             'meal': get_meal_by_id(meal_id),
+        }
+    )
+
+
+def random_recipe_from_ai(request: WSGIRequest) -> HttpResponse:
+    return render(
+        request,
+        'general_page/random_recipe_from_ai.html',
+        {
+            'user': request.user,
+            'meal': get_random_recipe(),
         }
     )

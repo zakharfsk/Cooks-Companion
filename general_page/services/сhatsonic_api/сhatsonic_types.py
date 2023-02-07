@@ -8,3 +8,14 @@ class DishesRate(NamedTuple):
     :var rate: str | None
     """
     rate: str | None
+
+
+class RandomRecipe(NamedTuple):
+    """
+    Random recipe
+
+    :var recipe: str
+    :var image: str
+    """
+    recipe: str
+    image: str

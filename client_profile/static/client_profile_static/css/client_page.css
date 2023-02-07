@@ -2,7 +2,13 @@
 
 .frig{
     margin: 0 auto;
-    width: 250px;
-    height: 500px;
-    background: #000;
+    width: 500px;
+    height: 600px;
+    /* background: #000; */
+    /* overflow: hidden; */
+}
+.frig canvas{
+    /* width: 250px; */
+    /* height: 500px; */
+    /* background: #000; */
 }

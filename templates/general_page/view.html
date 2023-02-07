@@ -28,7 +28,7 @@
         <div class="wrapper">
             <div class="meal-text">
                 <div class="meal-main-info">
-                    <h2 class="meal-title">Spaggeti whith sause</h2>
+                    <h2 class="meal-title">{{ meal.meal_name }}</h2>
                     <p class="cooking-time">1 Serving</p>
                 </div>
                 <p class="meal-difficult">Difficult: {{ meal.meal_rate }}</p>
@@ -40,58 +40,18 @@
             <div class="meal-ingredients">
                 <div class="meal-ingredients-head">
                     <p class="ingredients-box-title">Ingredients</p>
-                    <p class="ingredients-count">7 item</p>
+                    <p class="ingredients-count">{{ meal.ingredients | length }} item</p>
                 </div>
                 <ul class="meal-ingredients-list">
-                    <li>
-                        <img  class="meal-ingredients-img" src="{% static 'general_page_static/img/salat.png' %}" alt="meal ingredient photo">
+                    {% for ingredient in meal.ingredients %}
+                        <li>
+                        <img  class="meal-ingredients-img" src="{{ ingredient.ingredient_thumb }}" alt="meal ingredient photo">
                         <div class="meal-ingredients-title">
-                            <p>chees</p>
-                            <p>300 g</p>
+                            <p>{{ ingredient.ingredient_name }}</p>
+                            <p>{{ ingredient.ingredient_measure }}</p>
                         </div>
                     </li>
-                    <li>
-                        <img src="https://www.themealdb.com/images/ingredients/Lime-Small.png" alt="meal ingredient photo">
-                        <div class="meal-ingredients-title">
-                            <p>chees</p>
-                            <p>300 g</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="https://www.themealdb.com/images/ingredients/Lime-Small.png" alt="meal ingredient photo">
-                        <div class="meal-ingredients-title">
-                            <p>chees</p>
-                            <p>300 g</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="https://www.themealdb.com/images/ingredients/Lime-Small.png" alt="meal ingredient photo">
-                        <div class="meal-ingredients-title">
-                            <p>chees</p>
-                            <p>300 g</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="https://www.themealdb.com/images/ingredients/Lime-Small.png" alt="meal ingredient photo">
-                        <div class="meal-ingredients-title">
-                            <p>chees</p>
-                            <p>300 g</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="https://www.themealdb.com/images/ingredients/Lime-Small.png" alt="meal ingredient photo">
-                        <div class="meal-ingredients-title">
-                            <p>chees</p>
-                            <p>300 g</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="https://www.themealdb.com/images/ingredients/Lime-Small.png" alt="meal ingredient photo">
-                        <div class="meal-ingredients-title">
-                            <p>chees</p>
-                            <p>300 g</p>
-                        </div>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

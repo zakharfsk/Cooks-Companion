@@ -27,6 +27,19 @@ class Meal(NamedTuple):
     meal_thumb: str
 
 
+class MealIngredients(NamedTuple):
+    """
+    Meal ingredients
+
+    :var ingredient_name: str
+    :var ingredient_measure: str
+    :var ingredient_thumb: str
+    """
+    ingredient_name: str
+    ingredient_measure: str
+    ingredient_thumb: str
+
+
 class MealDetail(NamedTuple):
     """
     Meal detail
@@ -47,4 +60,5 @@ class MealDetail(NamedTuple):
     meal_category: str
     meal_tags: str
     meal_youtube: str
+    ingredients: list[MealIngredients]
     meal_rate: str = ''
