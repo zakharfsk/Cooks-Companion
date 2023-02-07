@@ -179,3 +179,4 @@ function loop() {
 	TWEEN.update();
 	renderer.render( scene, camera );
 }
+
