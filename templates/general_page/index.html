@@ -57,10 +57,11 @@
                         <p>{{ category.name_category }}</p>
                         <a href="{% url 'category_page' %}?c={{ category.name_category }}"></a>
                     </div>
-                {% endfor %}
+                {% endfor %{% static 'general_page_static/js/filter.js' %}}
             </div>
         </section>
     </div>
 </main>
+<script src="{% static 'general_page_static/js/index_page.js' %}"></script>
 </body>
 </html>
