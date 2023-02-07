@@ -57,7 +57,7 @@ def _create_request(input_text: str) -> tuple[str, int]:
     }
 
     response = requests.post(API_URL, json=payload, headers=headers)
-
+    print(response.json())
     return response.json()['message'], response.status_code
 
 
