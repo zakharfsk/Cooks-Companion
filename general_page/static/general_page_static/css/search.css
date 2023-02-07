@@ -1,31 +1,37 @@
 @import url(basis.css);
 @import url(index.css);
 
-.search-page .wrapper{
+.search-page .wrapper {
     width: var(--wraper-width);
 }
-.search-section{
+
+.search-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25rem;
 }
-.search-section form{
+
+.search-section form {
     margin-right: 20rem;
     margin-bottom: 0;
     width: 100%;
 }
-.filter-btn{
+
+.filter-btn {
     cursor: pointer;
     transition: .5s;
 }
-.filter-btn img{
+
+.filter-btn img {
     width: 35rem;
 }
-.filter-btn:hover{
+
+.filter-btn:hover {
     transform: scale(1.1);
 }
-.filter{
+
+.filter {
     padding: 25rem;
     position: fixed;
     height: 100vh;
@@ -38,37 +44,45 @@
     z-index: 10;
     transition: .5s;
 }
-.filter-active{
+
+.filter-active {
     right: 0;
 }
-.filter-nav{
+
+.filter-nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25rem;
 }
-.filter-title{
+
+.filter-title {
     font-size: 25rem;
 }
-.meals-title{
+
+.meals-title {
     font-size: 25rem;
     margin-bottom: 20rem;
 }
-.meals{
+
+.meals {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
 }
-.meal{
+
+.meal {
     display: inline-block;
     position: relative;
     font-size: 20rem;
     transition: 0.5s;
 }
-.meal:hover{
+
+.meal:hover {
     transform: scale(1.1);
 }
-.meal-detail{
+
+.meal-detail {
     padding: 5rem;
     position: absolute;
     top: 0px;
@@ -76,7 +90,8 @@
     background: rgba(256, 256, 256, .7);
     border-radius: 0 5px 0 5px;
 }
-.meal a{
+
+.meal a {
     position: absolute;
     top: 0;
     left: 0;
@@ -84,13 +99,15 @@
     height: 100%;
     z-index: 5;
 }
-.meal img{
+
+.meal img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
-.meal figcaption{
+
+.meal figcaption {
     padding: 10rem 0;
     position: absolute;
     left: 0;

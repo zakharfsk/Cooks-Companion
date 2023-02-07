@@ -1,36 +1,44 @@
 @import url(basis.css);
 
-.home-page .wrapper{
+.home-page .wrapper {
     width: 60%;
 }
-.wellcome-section{
+
+.wellcome-section {
     margin-bottom: 20rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.wellcome-section h1{
+
+.wellcome-section h1 {
     margin-bottom: 10rem;
     font-size: 35rem;
     color: var(--main-color);
 }
+
 .wellcome-section p {
     font-size: 18rem;
     color: var(--secondary-font-color);
 }
-.wellcome-img img{
+
+.wellcome-img img {
     width: 100rem;
 }
-.search-section{
+
+.search-section {
     margin-bottom: 50rem;
 }
-.search-section form{
+
+.search-section form {
     margin-bottom: 25rem;
 }
-.serach-box{
+
+.serach-box {
     position: relative;
 }
-.search-input{
+
+.search-input {
     display: block;
     padding: 10rem 10rem 10rem 40rem;
     width: 100%;
@@ -40,7 +48,8 @@
     border: var(--border-width) solid var(--search-input-bg);
     border-radius: 5px;
 }
-.search-ico{
+
+.search-ico {
     position: absolute;
     top: 50%;
     left: 10rem;
@@ -48,12 +57,14 @@
     height: 25rem;
     transform: translateY(-50%);
 }
-.recipes-or{
+
+.recipes-or {
     margin-bottom: 25rem;
     font-size: 30rem;
     text-align: center;
 }
-.all-recipes a{
+
+.all-recipes a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,20 +77,24 @@
     border-radius: 5px;
     transition: .5s;
 }
-.all-recipes a:hover{
+
+.all-recipes a:hover {
     transform: scale(1.1);
 }
-.categories-title{
+
+.categories-title {
     font-size: 25rem;
     margin-bottom: 25rem;
 }
-.categories{
+
+.categories {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
 }
-.category{
+
+.category {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +105,8 @@
     border-radius: 5px;
     transition: .5s;
 }
-.category a{
+
+.category a {
     position: absolute;
     top: 0;
     left: 0;
@@ -98,38 +114,47 @@
     height: 100%;
     border-radius: 5px;
 }
-.category img{
+
+.category img {
     width: 50rem;
 }
-.category:hover{
+
+.category:hover {
     transform: scale(1.1);
 }
-.first-card{
+
+.first-card {
     background: var(--first-category-color);
 }
-.second-card{
+
+.second-card {
     background: var(--second-category-color);
 }
-.thrid-card{
+
+.thrid-card {
     background: var(--thrid-category-color);
 }
-.fourth-card{
+
+.fourth-card {
     background: var(--fourth-category-color);
 }
-.fifth-card{
+
+.fifth-card {
     background: var(--fifth-category-color);
 }
-.sixth-card{
+
+.sixth-card {
     background: var(--sixth-category-color);
 }
 
 @media screen and ( max-width: 600px) {
-   .home-page .wrapper{
-    width: 80%;
-   }
+    .home-page .wrapper {
+        width: 80%;
+    }
 }
+
 @media screen and ( max-width: 375px) {
-    .wellcome-img{
+    .wellcome-img {
         display: none;
     }
 }
