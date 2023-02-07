@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'general_page.apps.GeneralPageConfig',
 
     'client_profile.apps.ClientProfileConfig',
+    'authorization.apps.AuthorizationConfig',
 ]
 
 MIDDLEWARE = [
