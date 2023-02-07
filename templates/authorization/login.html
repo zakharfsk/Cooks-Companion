@@ -31,15 +31,14 @@
                 <p class="auth-title">Login</p>
                 <label>
                     <input type="text" name="name" placeholder="name" required>
-                    <div class="error-box">
-                        <p class="error">eror</p>
-                    </div>
                 </label>
                 <label>
                     <input type="password" name="password" placeholder="password" required>
-                    <div class="error-box">
-                        <p class="error">eror</p>
-                    </div>
+                    {% if error %}
+                        <div class="error-box">
+                            <p class="error">{{ error }}</p>
+                        </div>
+                    {% endif %}
                 </label>
                 <label><input type="submit" value="Login" class="submit-btn"></label>
             </form>

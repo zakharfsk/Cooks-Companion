@@ -27,21 +27,23 @@
 <main>
     <div class="wrapper">
         <section class="login-section">
-            <form action="#" method="POST">
+            <form method="POST">
+                {% csrf_token %}
                 <p class="auth-title">Register</p>
                 <label>
-                    <input type="text" name="name" placeholder="name" required>
-                    <div class="error-box">
-                        <p class="error">eror</p>
-                    </div>
+                    {{ form.username }}
                 </label>
                 <label>
-                    <input type="password" name="password" placeholder="password" required>
+                    {{ form.password1 }}
+                </label>
+                <label>
+                    {{ form.password2 }}
+                    {{ form.non_field_errors }}
                     <div class="error-box">
-                        <p class="error">eror</p>
+                        <p class="error">{{ form.errors }}</p>
                     </div>
                 </label>
-                <label><input type="submit" value="Login" class="submit-btn"></label>
+                <label><input type="submit" value="Register" class="submit-btn"></label>
             </form>
         </section>
     </div>

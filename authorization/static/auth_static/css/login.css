@@ -5,6 +5,7 @@
     margin: 0 auto;
     border: var(--border-width) solid var(--main-color);
     border-radius: 5px;
+    font-size: 18rem;
 }
 
 .header-user-auth{
@@ -53,10 +54,11 @@
 
 .error-box{
     width: 40%;
+    color: brown;
 }
 .error{
     font-size: 20em;
-    color: brown;
+
 }
 
 @media screen and ( max-width: 600px) {
