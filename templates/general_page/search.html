@@ -17,7 +17,12 @@
             <div class="logo"><a href="{% url 'index_page' %}">Cooks Companion</a></div>
 
             <div class="header-user">
-                <a href="#">{{ user.username }}</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'user_profile' %}">{{ user.username }}</a>
+                {% else %}
+                    <a href="{% url 'login_page' %}">Login</a>
+                    <a href="{% url 'register_page' %}">Register</a>
+                {% endif %}
             </div>
         </nav>
     </div>

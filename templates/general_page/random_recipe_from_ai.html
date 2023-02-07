@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooks Companion</title>
+
+    <link rel="stylesheet" href="{% static 'general_page_static/css/view.css' %}">
+</head>
+<body>
+<main>
+    <section class="meal">
+        <div class="meal-nav">
+            <a href="{% url 'index_page' %}" class="back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.5 50">
+                    <line x1="24" y1="10" x2="5" y2="25" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="24" y1="40" x2="5" y2="25" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="meal-photo">
+            <img src="{{ meal.image }}" alt="meal photo">
+        </div>
+
+        <div class="wrapper">
+            <div class="meal-description">
+                <p class="meal-description-title">Descripton</p>
+                <p class="meal-description-text">{% autoescape off %}{{ meal.recipe }}{% endautoescape %}</p>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
