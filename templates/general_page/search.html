@@ -14,10 +14,9 @@
 <header>
     <div class="wrapper">
         <nav>
-            <div class="logo"><a href="index.html">Recipt</a></div>
-
+            <div class="logo"><a href="{% url 'index_page' %}">Recipt</a></div>
             <div class="header-user">
-                <a href="#">User</a>
+                <a href="{% url 'user_profile' %}">User</a>
             </div>
         </nav>
     </div>
