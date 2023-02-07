@@ -1,7 +1,7 @@
 from typing import Generator
 
 import requests
-from .meal_types import MealCategory, Meal, MealDetail
+from .meal_types import MealCategory, Meal, MealDetail, MealIngredients
 from ..сhatsonic_api.сhatsonic_service import get_answer
 
 API_URL = 'https://www.themealdb.com/api/json/v1/1/'
@@ -52,6 +52,7 @@ def get_meal_by_id(meal_id: str) -> MealDetail:
         meal_category=meal['strCategory'],
         meal_tags=meal['strTags'],
         meal_youtube=meal['strYoutube'],
+        ingredients=_parse_ingredient(meal),
         meal_rate=get_answer(meal['strMeal']).rate,
     )
 
@@ -91,3 +92,19 @@ def _get_list_categories() -> list[str]:
     :return: list[str]
     """
     return [category['strCategory'] for category in _create_request('list.php', '?c=list')['meals']]
+
+
+def _parse_ingredient(data: dict) -> list[MealIngredients]:
+    list_ingredients = []
+
+    for key, value in data.items():
+        if key.startswith('strIngredient') and value:
+            list_ingredients.append(
+                MealIngredients(
+                    ingredient_name=value,
+                    ingredient_measure=data[f'strMeasure{key[13:]}'],
+                    ingredient_thumb=f'https://www.themealdb.com/images/ingredients/{value}-Small.png'
+                )
+            )
+
+    return list_ingredients
