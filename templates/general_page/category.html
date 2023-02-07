@@ -56,9 +56,10 @@
         <section class="meals-section">
             <h3 class="meals-title">All meals</h3>
             <div class="meals">
-                {% for meal in meals %}
+                {% for meal in meal_category %}
                     <figure class="meal">
                         <div class="meal-detail">
+                            <p class="meal-difficult">dif: .</p>
                             <p class="meal-ingredients-count">count: 7</p>
                         </div>
                         <a href="{% url 'view_page' %}?id={{ meal.id_meal }}"></a>
@@ -68,7 +69,6 @@
                         </figcaption>
                     </figure>
                 {% endfor %}
-
             </div>
         </section>
     </div>
