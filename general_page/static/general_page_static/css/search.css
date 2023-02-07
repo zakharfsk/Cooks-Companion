@@ -55,6 +55,18 @@
     transition: .5s;
 }
 
+.filter select{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10rem;
+    width: 100%;
+    font-size: 20px;
+    color: var(--main-font-color);
+    background: var(--search-input-bg);
+    border: var(--border-width) solid var(--search-input-bg);
+    border-radius: 5px;
+}
+
 .filter-active {
     right: 0;
 }
