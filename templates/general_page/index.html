@@ -15,7 +15,7 @@
         <nav>
             <div class="logo"><a href="{% url 'index_page' %}">Recipt</a></div>
             <div class="header-user">
-                <a href="#">User</a>
+                <a href="{% url 'user_profile' %}">User</a>
             </div>
         </nav>
     </div>
@@ -25,7 +25,7 @@
     <div class="wrapper">
         <section class="wellcome-section">
             <div class="wellcome-text">
-                <h1>Hello User,</h1>
+                <h1>Hello {{ user.username }},</h1>
                 <p>What you want to cook today?</p>
             </div>
             <div class="wellcome-img"><img src="{% static 'general_page_static/img/salat.png' %}" alt="salat"></div>
