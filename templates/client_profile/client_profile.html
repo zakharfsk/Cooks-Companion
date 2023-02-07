@@ -14,7 +14,7 @@
 <header>
     <div class="wrapper">
         <nav>
-            <div class="logo"><a href="{% url 'index_page' %}">Recipt</a></div>
+            <div class="logo"><a href="{% url 'index_page' %}">Cooks Companion</a></div>
             <div class="header-user">
                 <a href="{% url 'user_profile' %}">User</a>
             </div>
@@ -32,7 +32,7 @@
         </section>
 
         <section class="user-frig">
-            <div class="frig"></div>
+            <div class="frig" id="container"></div>
             <div class="frig-meal-list">
                 <p class="frig-meal-list-title">Your meal</p>
                 <ul>
@@ -44,5 +44,11 @@
         </section>
     </div>
 </main>
+
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r89/build/three.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r89/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r89/examples/js/loaders/FBXLoader.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+<script src="{% static 'client_profile_static/js/frig.js' %}"></script>
 </body>
 </html>
