@@ -1,3 +1,22 @@
-.login-section{
+
+.login-section form{
+    padding: 20rem;
     background: #000;
+    border: var(--border-width) solid var(--main-color);
+    border-radius: 5px;
+}
+
+.login-section input{
+    display: block;
+    padding: 15rem 20rem;
+    width: 100%;
+    font-size: 20px;
+    color: var(--secondary-font-color);
+    background: var(--search-input-bg);
+    border: var(--border-width) solid var(--search-input-bg);
+    border-radius: 5px;
+}
+
+.login-section .submit-btn{
+    width: 100%;
 }
