@@ -18,6 +18,16 @@
     width: 100%;
 }
 
+.search-page .search-input {
+    padding: 15rem 15rem 15rem 40rem;
+    font-size: 18px;
+}
+
+.search-page .search-ico {
+    width: 25rem;
+    height: 25rem;
+}
+
 .filter-btn {
     cursor: pointer;
     transition: .5s;
@@ -113,7 +123,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    color: var(--all-recipes-color);
+    color: var(--main-font-color);
     text-align: center;
     background: var(--main-color);
     border-radius: 0 0 5px 5px;

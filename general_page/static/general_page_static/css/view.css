@@ -112,16 +112,26 @@
 }
 
 .meal-ingredients-list {
-    width: 70%;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
 }
 
 .meal-ingredients-list li {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    font-size: 25rem;
     margin-bottom: 20rem;
+    padding: 20px;
+    font-size: 25rem;
+    background: rgba(18, 148, 124, .5);
+    border-radius: 5px;
+}
+
+.meal-ingredients-img {
+    margin-right: 10px;
+    width: 75px;
 }
 
 .meal-ingredients-title {
@@ -129,9 +139,8 @@
     align-items: center;
 }
 
-.meal-ingredients-title img {
-    margin-right: 10px;
-    width: 50px;
+.meal-ingredients-title p:first-child{
+    margin-right: 15px;
 }
 
 @media screen and ( max-width: 1024px) {

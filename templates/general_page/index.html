@@ -15,7 +15,7 @@
         <nav>
             <div class="logo"><a href="{% url 'index_page' %}">Cooks Companion</a></div>
             <div class="header-user">
-                <a href="{% url 'user_profile' %}">{{ user.username }}Test</a>
+                <a href="{% url 'user_profile' %}">{{ user.username }} Test</a>
             </div>
         </nav>
     </div>
@@ -44,6 +44,7 @@
 
             <div class="all-recipes">
                 <a href="{% url 'search_page' %}">All Recipes</a>
+                <a href="{% url 'search_page' %}">AI Recipe</a>
             </div>
         </section>
 
