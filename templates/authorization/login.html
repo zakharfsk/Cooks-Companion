@@ -27,10 +27,11 @@
 <main>
     <div class="wrapper">
         <section class="login-section">
-            <form action="#" method="POST">
+            <form method="POST">
+                {% csrf_token %}
                 <p class="auth-title">Login</p>
                 <label>
-                    <input type="text" name="name" placeholder="name" required>
+                    <input type="text" name="username" placeholder="name" required>
                 </label>
                 <label>
                     <input type="password" name="password" placeholder="password" required>

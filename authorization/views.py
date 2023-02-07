@@ -5,8 +5,6 @@ from django.http.response import HttpResponse
 from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render, redirect
 
-from django.contrib.auth.models import User
-
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
@@ -21,7 +19,7 @@ def authorization_login(request: WSGIRequest) -> HttpResponse:
 
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('index_page')
         else:
             return render(request, 'authorization/login.html', {'error': 'Invalid credentials'})
 
