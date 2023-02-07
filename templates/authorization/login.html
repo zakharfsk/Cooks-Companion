@@ -15,7 +15,11 @@
     <div class="wrapper">
         <nav>
             <div class="logo"><a href="{% url 'index_page' %}">Cooks Companion</a></div>
-            
+            <div class="header-user">
+                <a href="{% url 'login' %}">Login</a>
+                <p>or</p>
+                <a href="{% url 'register' %}">Register</a>
+            </div>
         </nav>
     </div>
 </header>
@@ -26,7 +30,7 @@
             <form action="#" method="POST">
                 <label><input type="text" name="name" placeholder="name" required></label>
                 <label><input type="password" name="password" placeholder="password" required></label>
-                <label><input type="submit" value="Login"></label>
+                <label><input type="submit" value="Login" class="submit-btn"></label>
             </form>
         </section>
     </div>
