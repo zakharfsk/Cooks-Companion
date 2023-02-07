@@ -8,9 +8,6 @@ from .services.meal_api.meal_services import get_meal_categories, get_all_meals_
     get_meal_by_id
 
 
-# Create your views here.
-
-
 def index_page(request: WSGIRequest) -> HttpResponse:
     return render(
         request,
