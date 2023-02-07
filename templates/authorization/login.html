@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="{% static 'auth_static/css/login.css' %}">
 </head>
 <body>
-<header>
+<header class="auth-header">
     <div class="wrapper">
         <nav>
             <div class="logo"><a href="{% url 'index_page' %}">Cooks Companion</a></div>
-            <div class="header-user header-user-login">
+            <div class="header-user header-user-auth">
                 <a href="{% url 'login_page' %}">Login</a>
                 <p>or</p>
                 <a href="{% url 'register_page' %}">Register</a>
@@ -28,8 +28,19 @@
     <div class="wrapper">
         <section class="login-section">
             <form action="#" method="POST">
-                <label><input type="text" name="name" placeholder="name" required></label>
-                <label><input type="password" name="password" placeholder="password" required></label>
+                <p class="auth-title">Login</p>
+                <label>
+                    <input type="text" name="name" placeholder="name" required>
+                    <div class="error-box">
+                        <p class="error">eror</p>
+                    </div>
+                </label>
+                <label>
+                    <input type="password" name="password" placeholder="password" required>
+                    <div class="error-box">
+                        <p class="error">eror</p>
+                    </div>
+                </label>
                 <label><input type="submit" value="Login" class="submit-btn"></label>
             </form>
         </section>

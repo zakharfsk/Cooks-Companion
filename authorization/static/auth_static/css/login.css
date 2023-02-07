@@ -1,22 +1,69 @@
 
 .login-section form{
-    padding: 20rem;
-    background: #000;
+    padding: 40rem;
+    width: 50%;
+    margin: 0 auto;
     border: var(--border-width) solid var(--main-color);
     border-radius: 5px;
 }
 
-.login-section input{
+.header-user-auth{
+    display: flex;
+    align-items: center;
+}
+
+.header-user-auth p{
+    margin: 0 10px;
+}
+
+.auth-header{
+    margin-bottom: 100rem;
+}
+
+.auth-title{
+    text-align: center;
+    font-size: 30rem;
+    margin-bottom: 40px;
+}
+
+.login-section label{
     display: block;
+    margin-bottom: 20px;
+}
+
+.login-section label:last-child{
+    margin-bottom: 0;
+}
+
+.login-section input{
+    margin-bottom: 10px;
     padding: 15rem 20rem;
-    width: 100%;
+    width: calc(100% - var(--border-width) - 40rem);
     font-size: 20px;
-    color: var(--secondary-font-color);
+    color: var(--main-font-color);
     background: var(--search-input-bg);
-    border: var(--border-width) solid var(--search-input-bg);
+    border: var(--border-width) solid var(--main-font-color);
     border-radius: 5px;
 }
 
 .login-section .submit-btn{
     width: 100%;
+    margin-bottom: 0;
+}
+
+.error-box{
+    width: 40%;
+}
+.error{
+    font-size: 20em;
+    color: brown;
+}
+
+@media screen and ( max-width: 600px) {
+    .login-section form {
+        width: 70%;
+    }
+    .header-user-auth{
+        flex-direction: column;
+    }
 }
